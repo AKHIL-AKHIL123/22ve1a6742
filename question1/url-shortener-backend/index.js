@@ -1,4 +1,3 @@
-//write code for url shortner backend
 // This file is the main entry point for the URL shortener backend service  
 
 import express, { json } from 'express';
@@ -8,6 +7,11 @@ import errorHandler from './middleware/errorHandler.js';
 
 const app = express();
 const PORT = 3001;
+
+// Add a root route for friendly status
+app.get('/', (req, res) => {
+  res.send('URL Shortener Backend is running.');
+});
 
 app.use(json());
 app.use(logger);

@@ -1,6 +1,10 @@
-// Custom Logging Middleware (no console.log or built-in logging)
-const fs = require('fs');
-const path = require('path');
+
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const logFile = path.join(__dirname, 'access.log');
 
@@ -20,5 +24,4 @@ function logger(req, res, next) {
   });
   next();
 }
-module.exports = logger;
-
+export default logger;
