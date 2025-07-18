@@ -1,0 +1,16 @@
+{
+  "name": "url-shortener-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "geoip-lite": "^1.4.10",
+    "logger": "^0.0.1",
+    "nanoid": "^4.0.2",
+    "valid-url": "^1.0.9"
+  }
+}
